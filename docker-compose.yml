@@ -1,0 +1,13 @@
+services:
+  app:
+    container_name: voltagent_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3141:3141" # アプリケーションが使用するポートに合わせてください
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules # node_modulesをホストと同期しないように設定
+    # 開発時はホットリロードを有効にするコマンドなどを指定
+    command: npm run dev
