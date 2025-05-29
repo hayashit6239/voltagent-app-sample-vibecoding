@@ -1,6 +1,7 @@
 import { Agent, createTool, createToolkit, VoltAgent, VoltAgentExporter } from "@voltagent/core";
 import { VercelAIProvider } from "@voltagent/vercel-ai";
 import { anthropic } from "@ai-sdk/anthropic";
+import { google } from "@ai-sdk/google";
 import { z } from "zod";
 
 
@@ -46,7 +47,7 @@ export const calculatorAgent = new Agent({
   name: "Calculator Agent",
   description: `足し算と引き算を行うエージェントです`.trim(),
   llm: new VercelAIProvider(),
-  model: anthropic("claude-3-7-sonnet-20250219"),
+  model: google("gemini-2.5-flash-preview-05-20"),
   tools: [
     calcToolkit
   ],
