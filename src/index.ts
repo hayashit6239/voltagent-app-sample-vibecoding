@@ -11,7 +11,7 @@ const agent = new Agent({
   name: "Supervisor Agent",
   instructions: "あなたの役割は、他のエージェントを監督し、全体のプロセスを管理することです。最終的な目的は情報収集して得られた数字で足し算と引き算することです。",
   llm: new VercelAIProvider(),
-  model: google("gemini-2.5-flash-preview-05-20"),
+  model: anthropic("claude-3-5-sonnet-20241022"),
   subAgents: [informationCollectorAgent, calculatorAgent],
   // subAgents: [informationCollectorAgent],
 });

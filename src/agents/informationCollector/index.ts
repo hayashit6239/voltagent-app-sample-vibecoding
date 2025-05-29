@@ -19,6 +19,6 @@ export const informationCollectorAgent = new Agent({
   name: "information-collector",
   instructions: "ブラウザを操作して情報を収集するエージェントです。",
   llm: new VercelAIProvider(),
-  model: google("gemini-2.5-flash-preview-05-20"),
+  model: anthropic("claude-3-5-sonnet-20241022"),
   tools: tools,
 });

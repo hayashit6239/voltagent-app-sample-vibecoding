@@ -47,7 +47,7 @@ export const calculatorAgent = new Agent({
   name: "Calculator Agent",
   description: `足し算と引き算を行うエージェントです`.trim(),
   llm: new VercelAIProvider(),
-  model: google("gemini-2.5-flash-preview-05-20"),
+  model: anthropic("claude-3-5-sonnet-20241022"),
   tools: [
     calcToolkit
   ],
